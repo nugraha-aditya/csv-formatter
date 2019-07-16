@@ -30,7 +30,8 @@
                     @endif
                     <div class="form-group">
                         <label for="">Import Data</label>
-                        <input type="file" accept=".csv" name="file" class="form-control {{ $errors->has('file') ? 'is-invalid':'' }}" required>
+                        <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                         name="file" class="form-control {{ $errors->has('file') ? 'is-invalid':'' }}" required>
                         <p class="text-danger">{{ $errors->first('file') }}</p>
                     </div>
                     <div class="form-group">
